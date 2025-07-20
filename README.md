@@ -71,12 +71,6 @@ You can find some other useful commands in the Makefile.
 
 
 
-### RUN pre-commit
-run-pre-commit
-
-```
-make run-tests
-```
 
 
 
