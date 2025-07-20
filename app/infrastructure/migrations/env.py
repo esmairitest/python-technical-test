@@ -4,7 +4,7 @@ from logging.config import fileConfig
 from alembic import context
 from config import get_settings
 from infrastructure.db import Base, engine
-from infrastructure.models import *  # noqa: F403
+from infrastructure.models import *  # pylint: disable=W0614,W0401  # noqa: F403,F401
 from sqlalchemy.engine import Connection
 
 # this is the Alembic Config object, which provides
@@ -31,7 +31,7 @@ def run_migrations_offline() -> None:
     script output.
 
     """
-    url = str(get_settings().db_url)
+    url = str(get_settings().target_db_url)
     context.configure(
         url=url,
         target_metadata=target_metadata,

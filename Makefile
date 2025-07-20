@@ -36,3 +36,9 @@ lint_fix:
 
 generate_requirements:
 	poetry export -f requirements.txt --output requirements.txt --without-hashes
+
+run-pre-commit:
+	poetry run pre-commit run --all-files
+
+run-tests:
+	poetry run pytest tests

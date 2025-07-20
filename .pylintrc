@@ -1,0 +1,12 @@
+[MASTER]
+ignore-paths=.git/*,tests/*
+
+
+[MESSAGES CONTROL]
+disable=C0114,C0115,C0116,E0401,R0903,C0415,C0103
+
+[FORMAT]
+max-line-length=100
+
+[REPORTS]
+output-format=colorized

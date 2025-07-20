@@ -26,8 +26,8 @@ By effectively managing both sites and groups within our system, we can efficien
 - `type` (enum [group1, group2, group3])
 
 
-A site can belong to multiple groups.  
-A group can contain multiple sites.  
+A site can belong to multiple groups.
+A group can contain multiple sites.
 A group can contain multiple groups.
 
 ### 2. Create the necessary CRUD routes
@@ -53,7 +53,7 @@ Integrate these new Italian sites. (Many new countries with specific fields migh
 
 ### Prerequisites
 - `docker` for installation
-- `poetry` (https://python-poetry.org/) can be useful to manage dependencies (but not mandatory) 
+- `poetry` (https://python-poetry.org/) can be useful to manage dependencies (but not mandatory)
 
 
 ### Run the project
@@ -66,3 +66,31 @@ docker compose up
 The project should be available at `http://localhost:8000/docs`.
 
 You can find some other useful commands in the Makefile.
+
+
+
+
+
+### RUN pre-commit
+run-pre-commit
+
+```
+make run-tests
+```
+
+
+
+### Run pytest
+
+INstall dev requirements:
+```
+   poetry install --with dev
+```
+
+
+
+Requires DB_TEST_URL to be present  in .env
+
+```
+pytest tests
+```
